@@ -1,3 +1,5 @@
+
+@import '~antd/dist/antd.css';
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,56 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+*{
+  margin-top: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html{
+  margin-top: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --back-groundColor: #242526;
+  --primary-color: #0084FF;
+  --text-color: #e9e2d8;
+  --btn-2-color: #3A3B3C;
+  --line-color: #3a3b3c;
+}
+/* scroll bar */
+::-webkit-scrollbar{
+  width: 6px;
+}
+::-webkit-scrollbar-track{
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 3px;
+  background-color: var(--line-color);
+}
+.cus-btn{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 15px 6px;
+  color: var(--text-color);
+  font-size: 18px;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+}
+.cus-btn:hover{
+  opacity: 0.7;
+}
+.cus-input{
+  width: 100%;
+  height: 38px;
+  padding: 0px 12px;
+  border: none;
+  outline: none;
+  border-radius: 38px;
+  background-color: var(--line-color);
+  color: whitesmoke;
+  font-size: 16px;
 }

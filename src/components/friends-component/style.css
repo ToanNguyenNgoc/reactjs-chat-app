@@ -1,0 +1,21 @@
+.ant-modal-body{
+      padding: 6px 6px;
+}
+.friend__list li{
+      margin: 10px 0px;
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 739px){
+      .ant-modal-body{
+            height: 82%;
+      }
+      .friends-box{
+            height: 100%;
+      }
+      .friends-box div{
+            max-height: unset;
+            height: 100%;
+      }
+}

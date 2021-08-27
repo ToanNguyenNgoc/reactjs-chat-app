@@ -1,0 +1,7 @@
+/* container */
+.cus-container{
+      width: 100%;
+      background-color: var(--back-groundColor);
+      display: flex;
+      flex-direction: row;
+}

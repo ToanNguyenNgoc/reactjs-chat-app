@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Login from './components/login';
+import {Route, Switch, BrowserRouter} from 'react-router-dom'
+
+import AuthProvider from './Context';
+import AppProvider from './Context/AppProvider';
+import AddRoom from './components/Modals/AddRoom';
+import InviteMember from './components/Modals/InviteMember';
+import Home from './components/main-component';
+import FriendList from './components/friends-component/index';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <AuthProvider>
+        <AppProvider>
+          <Switch>
+            <Route component={Login} path='/login' />
+            <Route component={Home} path="/home" />
+          </Switch>
+          <AddRoom/>
+          <InviteMember/>
+          <FriendList/>
+        </AppProvider>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
 
